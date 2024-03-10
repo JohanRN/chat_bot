@@ -1,0 +1,27 @@
+body {
+    background: #f6f6f9;
+    padding: 4vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divconteiner {
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    max-width: 400px;
+    background: #fff;
+
+}
+
+.background-image {
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/1149.jpg');
+    background-size: auto 100%;
+    filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

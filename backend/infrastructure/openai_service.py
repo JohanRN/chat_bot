@@ -5,7 +5,7 @@ import os
 relative_path = 'file/1.pdf'
 absolute_path = os.path.abspath(relative_path)
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def get_answer_from_openai(question):
     response = openai.ChatCompletion.create(

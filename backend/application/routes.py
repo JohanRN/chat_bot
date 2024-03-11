@@ -13,10 +13,11 @@ def fn_question():
     try:
         data = request.get_json()
         question = process_question(data.get('question'))
-        answer = get_answer_from_cache(question)
-        if answer is None:
-            answer = get_answer_from_openai(question)
-            save_answer_to_cache(question, answer)
+        # answer = get_answer_from_cache(question)
+        # if answer is None:
+        #     answer = get_answer_from_openai(question)
+        #     save_answer_to_cache(question, answer)
+        answer = get_answer_from_openai(question)    
         return jsonify({"answer": answer}), 200
         
     except Exception as e:
@@ -27,10 +28,11 @@ def fn_question():
 def fn_generated_question():
     try:
         question = '¿Generarame 3 preguntas genericas,importantes y cortas sobre Simón Bolívar?'
-        answer = get_answer_from_cache(question)
-        if answer is None:
-            answer = get_answer_from_openai(question)
-            save_answer_to_cache(question, answer)
+        # answer = get_answer_from_cache(question)
+        # if answer is None:
+        #     answer = get_answer_from_openai(question)
+        #     save_answer_to_cache(question, answer)
+        answer = get_answer_from_openai(question)
         return jsonify({"answer": answer}), 200
     except Exception as e:
         return jsonify({"Error": str(e)}), 500
